@@ -1,0 +1,582 @@
+@font-face{font-family:'FShabnam';src:url('../font/Shabnam.woff') format('woff'),url('../font/Shabnam.ttf') format('truetype');}
+@font-face{font-family:'FShabnamB';src:url('../font/Shabnam-Bold.woff') format('woff'),url('../font/Shabnam-Bold.ttf') format('truetype');}
+@font-face{font-family:'Material';src:url('../font/MaterialIcons.woff') format('woff'),url('../font/MaterialIcons.ttf') format('truetype');}
+::selection{background:#B46969; color:#fff;}
+::-moz-selection{background:#B46969; color:#fff;}
+a{text-decoration:none !important;} a:hover{text-decoration:none !important;} a:active{text-decoration:none !important;}
+.noselect{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
+.material-icons{font-family:'Material'; font-weight:normal; font-style:normal; font-size:24px; display:inline-block; line-height:1; text-transform:none; letter-spacing:normal; word-wrap:normal; white-space:nowrap; direction:ltr; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; -moz-osx-font-smoothing:grayscale; font-feature-settings:'liga';}
+body{
+    direction: rtl !important;
+    text-align: right;
+}
+.coverBG{
+    background: url("../image/cover1.jpg") no-repeat bottom right;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+/*
+    Header
+*/
+#header{
+    display: block;
+    width: 100%;
+    float:right;
+    margin-top: 35px;
+    transition: .4s;
+}
+.scrolled{position: fixed;}
+#navLogo{
+    display: inline-block;
+    background: url("../image/logo.svg") no-repeat;
+    background-size: contain;
+    float: right;
+    width: 110px;
+    height: 40px;
+    font-size: 0;
+}
+.navbar{
+    display: inline-block;
+    float: left;
+    margin-top: 4px;
+}
+.navbar li{
+    float: right;
+    list-style: none;
+    margin-left: 10px;
+}
+.navbar li:last-child{margin-left: 0px;}
+.navbar li a{
+    color: #fff;
+    font-family: 'FShabnamB';
+    font-size: 20px;
+    padding:6px 9px 6px 9px;
+    transition: .4s;
+}
+.navbar li a:hover{
+    background: rgba(0, 0, 0, 0.2);
+    color: #E5CE8A;
+    border-radius: 5px;
+}
+#coverText{
+    display: block;
+    color: #fff;
+    float: right;
+    text-align: right;
+    margin: 70px 35% 0 0;
+}
+.ctTitle{
+    font: 27px 'FShabnamB';
+    margin-bottom: 7px;
+}
+.ctText{
+    font: 20px 'FShabnam';
+    text-align: justify;
+    margin-bottom: 25px;
+}
+.ctButton{
+    display: inline-block;
+    font: 20px 'FShabnamB';
+    border: 3px solid transparent;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    padding:7px 12px;
+    margin-left: 7px;
+    transition: .4s;
+}
+.ctButton:hover{
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.35), 0 10px 10px rgba(0, 0, 0, 0.32);
+}
+.ctButton:active{
+    box-shadow: 0 4px 48px rgba(0, 0, 0, 0.35), 0 4px 18px rgba(0, 0, 0, 0.32);
+}
+.ctButtonText{
+    display: inline;
+}
+.ctButton i{
+    display: inline;
+    font-size: 24px;
+    float: right;
+    margin: 1px 0 0 10px;
+    transition: .5s;
+}
+.ctBtn1{
+    background: #fff;
+    color: #22264A;
+}
+.ctBtn1:hover{
+    background: #22264A;
+    color:#fff;
+}
+.ctBtn2{
+    background: none;
+    color:#fff;
+    border-color: #fff;
+}
+.ctBtn2:hover{
+    background: #E5CE8A;
+    color: #22264A;
+    border-color: #E5CE8A;
+}
+.ctBtn1:hover > i{transform: rotateY(360deg);}
+.ctBtn2:hover > i{transform: rotateY(360deg);}
+
+/*
+    Sections
+ */
+.section{
+    width: 100%;
+    padding: 35px 0 30px 0;
+}
+.blackSection{
+    background: #22264A;
+}
+.whiteSection{
+    background: #E5CE8A;
+}
+.section h2{
+    font: 27px 'FShabnamB';
+    text-align: center;
+    margin-bottom: 55px;
+}
+.section h2 span{padding-bottom: 2px;}
+.blackSection h2 span{
+    color: #fff;
+    border-bottom: solid 4px #fff;
+}
+.whiteSection h2 span{
+    color: #22264A;
+    border-bottom: solid 4px #22264A;
+}
+.moreBtn{
+    display: none;
+    width: 47px;
+    border-radius: 50%;
+    text-align: center;
+    margin-top: 7px;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    margin-bottom: -7px;
+    cursor: pointer;
+    transition: .4s;
+}
+.moreBtn i{font-size: 35px; padding-top: 7px;}
+.blackSection .moreBtn{color: #fff;}
+.blackSection .moreBtn:hover{background: rgba(255, 255, 255, .07);}
+.whiteSection .moreBtn{color: #22264A;}
+.whiteSection .moreBtn:hover{background: rgba(0, 0, 0, .07);}
+
+/*
+    Services Section
+ */
+.serviceBox{
+    margin-bottom: 9px;
+}
+.serviceIcon{
+    background: #E5CE8A;
+    float: right;
+    border-radius: 4px;
+    padding: 10px 10px 4px 10px;
+}
+.serviceIcon i{
+    color: #22264A;
+}
+.serviceTitle{
+    color: #fff;
+    font: 20px 'FShabnamB';
+    margin: 13px 55px 0 0;
+}
+.serviceText{
+    color: #fff;
+    font: 18px 'FShabnam';
+    text-align: justify;
+    float: right;
+    margin-top: 10px;
+    cursor: default;
+}
+
+/*
+    Portfolio Section
+ */
+.portfolioBox{
+    position: relative;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    transition: 0.4s cubic-bezier(.25,.8,.25,1);
+    padding: 0 !important;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.portfolioBox:hover{box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);}
+.portfolioThumb{
+    width: 100%;
+    transition: .4s;
+}
+.portfolioTitle{
+    color: #333;
+    font: 17px 'FShabnamB';
+    padding: 0 14px 2px 14px;
+    margin-top: 11px;
+}
+.portfolioTitle i{float: right;}
+.portfolioTitle span{margin-right: 7px;}
+.portfolioTags{
+    direction: ltr;
+    position: absolute;
+    top: 10px;
+    left: -120px;
+    opacity: 0;
+    transition: .3s;
+}
+.portfolioTags li{
+    display: table;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border-radius: 3px;
+    font-size: 11px;
+    text-align: left;
+    list-style: none;
+    padding: 1px 5px 3px 5px;
+    margin-bottom: 4px;
+}
+.portfolioBox:hover > .portfolioTags{
+    left: -32px;
+    opacity: .9;
+}
+.portfolioBox:hover > .portfolioThumb{opacity: .9;}
+.preloader{
+    color: #fff;
+    font-size: 50px;
+    margin-top: -13px;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    animation: "preloader" 2s infinite;
+}
+@keyframes preloader{
+    to{
+        transform: rotate(-360deg);
+    }
+}
+
+/*
+    Github Section
+ */
+#github{
+    direction: ltr !important;
+    text-align: left;
+}
+.githubBox{
+    position: relative;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    transition: all 0.4s cubic-bezier(.25,.8,.25,1);
+    margin-bottom: 20px;
+}
+.githubBox:hover{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.gb_inner{
+    padding:10px 9px;
+}
+.githubTop{
+    border-bottom: 1px solid #aaa;
+    padding-bottom: -2px;
+}
+.githubTitle{
+    display: inline-block;
+    color: #333;
+    font: 18px 'FShabnamB';
+    margin-bottom: 6px;
+}
+.githubTitle i{float: left;}
+.githubTitle span{
+    display: inline-block;
+    margin-top: 2pt;
+    margin-left: 4px;
+}
+.githubCat{
+    display: inline-block;
+    background: #B46969;
+    color: #fff;
+    font: 13px 'FShabnam';
+    border-radius: 3px;
+    float: right;
+    padding: 2px 5px 0 5px;
+    margin: 2px 2px 0 0;
+}
+.githubDesc{
+    color: #222;
+    font: 15px 'FShabnam';
+    margin-top: 12px;
+}
+
+/*
+    About Section
+ */
+.aboutPaper{
+    width: 100%;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    padding: 18px 18px;
+}
+.aboutText{
+    font: 19px 'FShabnam';
+    text-align: justify;
+    text-indent: 24px;
+}
+.aboutTitle{
+    font: 21px 'FShabnamB';
+    margin-bottom: 0;
+}
+.skill{margin-bottom: 15px;}
+.skillTitle{
+    color: #333;
+    font: 16px 'FShabnam';
+    text-align: left;
+}
+.skillProgressBar{
+    width: 100%;
+    height: 7px;
+    background: #ddd;
+}
+.skillProgress{
+    width: 0%;
+    height: 100%;
+    background: #B46969;
+}
+.otherSkills{
+    color: #555;
+    text-align: justify;
+}
+
+
+/*
+    Contact Wrapper
+ */
+.contactPaper{
+    padding: 23px 27px;
+}
+.wpInput{
+    width: 100%;
+    background: transparent;
+    color: #000;
+    font: 17px 'FShabnam';
+    border: none;
+    border-bottom: 2px solid #B46969;
+    padding-bottom: 3px;
+    margin-bottom: 23px;
+    transition: .3s;
+}
+.wpInput:focus{
+    box-shadow: 0 1px 0 #B46969;
+}
+.wpLabel{
+    position: absolute;
+    font: 17px 'FShabnam';
+    top: 4px;
+    right: 15px;
+    transition: .27s;
+    pointer-events: none;
+}
+.wpSelect{
+    width: 100%;
+    background: transparent;
+    font: 17px 'FShabnam';
+    border: none;
+    border-bottom: 2px solid #B46969;
+    padding-bottom: 3px;
+    margin-top: 3px;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    appearance:none;
+    cursor: pointer;
+}
+.wpSelectTitle{
+    pointer-events: none;
+}
+.wpSelectArrow{
+    float: left;
+    margin-top: 4px;
+}
+.wpSelectUl{
+    display: none;
+    position: absolute;
+    z-index: 999;
+    background: #fff;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    padding: 0;
+    margin-top: 6px;
+    overflow: hidden;
+}
+.wpSelectUl li{
+    list-style: none;
+    padding: 10px 16px;
+    cursor: pointer;
+}
+.wpSelectUl li:hover{
+    background: #eee;
+}
+#cnSend{
+    width: 160px;
+    height: 43px;
+    background: #B46969;
+    color: #fff;
+    font: 17px 'FShabnam';
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+    padding-top: 10px;
+    float: left;
+    margin-top: 7px;
+    cursor: pointer;
+    transition: .4s;
+}
+#cnSend:hover{
+    background: #c07171;
+}
+#cnSend:active{
+    background: #B46969;
+}
+.contactFormMessage{
+    display: none;
+    color: #9f5657;
+    font: 16px 'FShabnam';
+    float: right;
+    margin: 17px 0 0 0;
+}
+.contactFormMessage i{
+    font-size: 18px;
+    float:right;
+    margin: 1px 0 0 5px;
+}
+#cnToast{
+    display: none;
+    position: fixed;
+    background: rgba(33, 33, 33, .9);
+    color: #fff;
+    font: 19px 'FShabnam';
+    padding: 14px 23px 13px 23px;
+    border-radius: 5px;
+    top: 40%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -143px;
+}
+
+/*
+    Footer
+ */
+#footer{
+    padding-top: 2px;
+    padding-right: 0;
+    margin-top: 31px;
+}
+.footerRight{
+    color: #fff;
+    font: 18px 'FShabnam';
+    text-align: justify;
+}
+.ft1{
+    float: right;
+}
+.ft2{
+    margin-right: 29px;
+}
+.footerHeart{
+    position: absolute;
+    color: #B46969;
+    animation: footerHeart 1s infinite;
+    margin: 4px 6px 0 0;
+}
+@keyframes footerHeart{
+    0%{
+        font-size: 17px;
+    }
+    20%{
+        font-size: 19px;
+        margin-top: 3px;
+    }
+    40%{
+        font-size: 17px;
+    }
+    60%{
+        font-size: 19px;
+        margin-top: 3px;
+    }
+    80%{
+        font-size: 17px;
+    }
+    100%{
+        font-size: 17px;
+    }
+}
+
+/*
+    GoTop Button
+ */
+#goTop{
+    position: fixed;
+    display: none;
+    background: rgba(0, 0, 0, .28);
+    border-radius: 4px;
+    padding: 7px 8px 3px 8px;
+    bottom: 30px;
+    right: 40px;
+    cursor: pointer;
+}
+#goTop div{
+    color: #fff;
+    font-size: 30px;
+}
+#goTop:hover{
+    background: rgba(0, 0, 0, .3);
+}
+
+/*
+    Media Queries
+ */
+@media only screen and (max-width: 600px){
+    .coverBG{
+        background-position-x: -670px;
+        height: 180vh;
+    }
+    #nav{display: none;}
+    #coverText{
+        width: 100%;
+        margin-right: 0;
+    }
+    .ctButtons{width: 100%;}
+    .ctButton{
+        width: 100%;
+        margin-bottom: 13px;
+    }
+    .skillsTitle{
+        margin-top: 18px;
+    }
+    .wpInput, .wpSelect{
+        margin-bottom: 28px;
+    }
+}
+
+@media only screen and (min-width: 600px){
+
+}
+
+@media only screen and (min-width: 768px){
+
+}
+
+@media only screen and (min-width: 992px){
+
+}
+
+@media only screen and (min-width: 1200px){
+
+}
