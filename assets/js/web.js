@@ -54,7 +54,7 @@ function emptyForm(){
     $('.wpSelectTitle').text('موضوع پیام');
 }
 
-//-> ajaxComplete
+
 $(document).ajaxComplete(function(){
     $('.preloader').hide();
     $('.moreBtn').show();
@@ -62,12 +62,11 @@ $(document).ajaxComplete(function(){
     repositoriesLoad(3);
 });
 
-//-> documentReady
+
 $(document).ready(function(){
     let ctHeight = $('#coverText').outerHeight() + 250;
     $('.coverBG').css('min-height', ctHeight + 'px');
 
-////// #Goto Links
     function goTo(div){
         $('html, body').animate({scrollTop: $(div).offset().top}, 1000);
     }
@@ -77,7 +76,6 @@ $(document).ready(function(){
         return 0;
     });
 
-////// GO-TOP Button
     $(window).scroll(function(){
         const servicesBoxTop = $('#services').position().top;
         if($(window).scrollTop() > servicesBoxTop){
@@ -91,7 +89,6 @@ $(document).ready(function(){
         document.location.hash = '';
     });
 
-////// #Mobile Menu
     $('.mobile-nav-button').click(function(){
         $('#coverText').toggleClass('blurBG noselect');
         $('body').toggleClass('noscroll');
@@ -107,7 +104,6 @@ $(document).ready(function(){
         $('.mobile-nav-button').click();
     });
 
-////// #More Buttons
     $('.portfolioMore').click(function(){
         portfolioLoad();
         $(this).hide();
@@ -117,7 +113,6 @@ $(document).ready(function(){
         $(this).hide();
     });
 
-////// #Progressbar onScroll Codes
     $(window).scroll(function(){
         if (pbVisited == false){
             const pbElement = $('.skillProgress').position().top;
@@ -131,8 +126,6 @@ $(document).ready(function(){
         }
     });
 
-////// #Contact Form Codes
-    // ## Input Material Style
     $('.wpInput').val('');
     $('.wpInput').focus(function(){
         $('.contactFormMessage').fadeOut();
@@ -151,7 +144,6 @@ $(document).ready(function(){
             $('.wpl4').animate({'top': '23px'}, 50).css('color', '#000');
         }
     });
-    // ##wpSelect Codes
     $('#cnCat').click(function(){
         $('.contactFormMessage').fadeOut();
         $('.wpSelectUl').slideToggle();
@@ -164,7 +156,6 @@ $(document).ready(function(){
        let catTitle = $(this).attr('cat');
        $('.wpSelectTitle').hide().html(catTitle).fadeIn(200);
     });
-    // ##Send Message!
     $('#cnSend').click(function(){
         if (validateForm()){
             let name = $('#cnName').val();
