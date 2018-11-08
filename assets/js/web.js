@@ -2,7 +2,7 @@ const appURL = location.href.replace(location.hash,"");
 let pbVisited = false;
 let portfolio = {}, repositories = {};
 $.getJSON(appURL+"assets/portfolio.json", function(data){portfolio=data;});
-$.getJSON("https://api.github.com/users/webpajooh/repos?sort=updated&direction=asc", function(data){repositories=data;});
+//$.getJSON("https://api.github.com/users/webpajooh/repos?sort=updated&direction=asc", function(data){repositories=data;});
 
 //-> General Functions
 function portfolioLoad(count = portfolio.length){
@@ -32,7 +32,7 @@ function repositoriesLoad(count = repositories.length){
         let rLang = repositories[i].language;
         if (!rLang){rLang='Unknown';}
         let rURL = repositories[i].url;
-        let newRepositorie = '<div class="col-lg-4"><a href="' + rURL + '"><div class="githubBox"><div class="gb_inner"><div class="githubTop"><h3 class="githubTitle"><i class="material-icons">archive</i> <span>' + rName + '</span></h3><span class="githubCat">' + rLang + '</span></div><div class="githubDesc">' + rDesc + '</div></div></div></a></div>';
+        let newRepositorie = '<div class="col-lg-4 col-sm-12 col-md-6"><a href="' + rURL + '"><div class="githubBox"><div class="gb_inner"><div class="githubTop"><h3 class="githubTitle"><i class="material-icons">archive</i> <span>' + rName + '</span></h3><span class="githubCat">' + rLang + '</span></div><div class="githubDesc">' + rDesc + '</div></div></div></a></div>';
         $('.githubsBox').append(newRepositorie).fadeIn(300);
     }
 }
@@ -88,6 +88,21 @@ $(document).ready(function(){
         document.location.hash = '';
     });
 
+////// #Mobile Menu
+    $('.mobile-nav-button').click(function(){
+        $('#coverText').toggleClass('blurBG noselect');
+        $('body').toggleClass('noscroll');
+        $('.mobileVHeader').fadeToggle();
+        $('#mobileMenu').animate({width: 'toggle'});
+        if ($('.mnbi').text()=='menu'){
+            $('.mnbi').text('close');
+        }else{
+            $('.mnbi').text('menu');
+        }
+    });
+    $('.menuNavbar').find('li').click(function(){
+        $('.mobile-nav-button').click();
+    });
 
 ////// #More Buttons
     $('.portfolioMore').click(function(){
@@ -139,7 +154,7 @@ $(document).ready(function(){
         $('.wpSelectUl').slideToggle();
         return false;
     });
-    $(document).click(function() {
+    $(document).click(function(){
         $('.wpSelectUl').slideUp();
     });
     $('.setMessageCat').click(function(){

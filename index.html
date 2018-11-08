@@ -12,10 +12,23 @@
 </head>
 <body>
 <div class="coverBG">
+    <div class="mobileVHeader"></div>
+    <div id="mobileMenu">
+        <ul class="menuNavbar">
+            <li><a href="#services" class="goto">خدمات</a></li>
+            <li><a href="#portfolio" class="goto">نمونه‌کارها</a></li>
+            <li><a href="#github" class="goto">گیت‌هاب</a></li>
+            <li><a href="#about" class="goto">کمی از من!</a></li>
+            <li><a href="#contact" class="goto">تماس با وب‌پژوه</a></li>
+        </ul>
+    </div>
     <div class="container">
         <header id="header">
             <a href="."><div id="navLogo">وب‌پژوه</div></a>
-            <nav id="nav" class="noselect">
+            <div class="mobile-nav-button d-lg-none d-md-none noselect">
+                <i class="material-icons mnbi">menu</i>
+            </div>
+            <nav id="nav" class="noselect d-sm-none d-md-none d-lg-block">
                 <ul class="navbar">
                     <li><a href="#services" class="goto">خدمات</a></li>
                     <li><a href="#portfolio" class="goto">نمونه‌کارها</a></li>

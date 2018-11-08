@@ -22,6 +22,8 @@ body{
 */
 #header{
     display: block;
+    position: relative;
+    z-index: 2;
     width: 100%;
     float:right;
     margin-top: 35px;
@@ -59,6 +61,56 @@ body{
     background: rgba(0, 0, 0, 0.2);
     color: #E5CE8A;
     border-radius: 5px;
+}
+.mobile-nav-button{
+    color: #fff;
+    float: left;
+}
+.mobile-nav-button i{
+    font-size: 38px;
+}
+.mobileVHeader{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 107px;
+    background: rgba(0, 0, 0, .6);
+}
+#mobileMenu{
+    display: none;
+    position: absolute;
+    z-index: 999;
+    height: 100vh;
+    background: #fff;
+    box-shadow: 0 16px 24px 2px rgba(0,0,0,0.4),0 6px 30px 5px rgba(0,0,0,1),0 8px 10px -7px rgba(0,0,0,1);
+    padding-top: 20px;
+    left: 0;
+    top: 108px;
+}
+.menuNavbar{
+    display: contents;
+}
+.menuNavbar li{
+    list-style: none;
+}
+.menuNavbar li a{
+    display: block;
+    color: #111;
+    font: 19px 'FShabnamB';
+    padding: 12px 40px 12px 100px;
+    transition: .4s;
+}
+.menuNavbar li a:hover{
+    background: #f3f3f3;
+}
+.blurBG{
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+}
+.noscroll{
+    max-height: 100vh;
+    overflow-y: hidden;
 }
 #coverText{
     display: block;
@@ -543,11 +595,13 @@ body{
     Media Queries
  */
 @media only screen and (max-width: 600px){
+    #nav{
+        display: none;
+    }
     .coverBG{
         background-position-x: -670px;
         height: 180vh;
     }
-    #nav{display: none;}
     #coverText{
         width: 100%;
         margin-right: 0;
@@ -565,18 +619,8 @@ body{
     }
 }
 
-@media only screen and (min-width: 600px){
-
-}
-
-@media only screen and (min-width: 768px){
-
-}
-
-@media only screen and (min-width: 992px){
-
-}
-
-@media only screen and (min-width: 1200px){
-
+@media only screen and (min-device-width: 768px) and (max-device-width: 991px){
+    .mobile-nav-button{
+        display: block !important;
+    }
 }
