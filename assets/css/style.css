@@ -500,6 +500,7 @@ body{
     display: none;
     color: #9f5657;
     font: 16px 'FShabnam';
+    text-align: justify;
     float: right;
     margin: 17px 0 0 0;
 }
@@ -616,6 +617,8 @@ body{
     .wpInput, .wpSelect{
         margin-bottom: 28px;
     }
+    #cnSend{width: 100%;}
+    .contactFormMessage{margin-top: -5px; margin-bottom: 7px;}
 }
 
 @media only screen and (min-width: 600px) and (max-width: 767px){
@@ -630,6 +633,8 @@ body{
     .skillsTitle{
         margin-top: 18px;
     }
+    #cnSend{width: 100%;}
+    .contactFormMessage{margin-top: -5px; margin-bottom: 7px;}
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 991px){
