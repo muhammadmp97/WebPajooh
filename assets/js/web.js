@@ -64,6 +64,9 @@ $(document).ajaxComplete(function(){
 
 //-> documentReady
 $(document).ready(function(){
+    let ctHeight = $('#coverText').outerHeight() + 250;
+    $('.coverBG').css('min-height', ctHeight + 'px');
+
 ////// #Goto Links
     function goTo(div){
         $('html, body').animate({scrollTop: $(div).offset().top}, 1000);
