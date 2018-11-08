@@ -618,6 +618,20 @@ body{
     }
 }
 
+@media only screen and (min-width: 600px) and (max-width: 767px){
+    .ctButtons{width: 100%;}
+    .ctButton{
+        width: 100%;
+        margin-bottom: 13px;
+    }
+    #coverText{
+        margin-right: 1%;
+    }
+    .skillsTitle{
+        margin-top: 18px;
+    }
+}
+
 @media only screen and (min-device-width: 768px) and (max-device-width: 991px){
     .mobile-nav-button{
         display: block !important;
