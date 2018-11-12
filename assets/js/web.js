@@ -5,7 +5,7 @@ $.getJSON(appURL+"assets/portfolio.json", function(data){portfolio=data;});
 $.getJSON("https://api.github.com/users/webpajooh/repos?sort=updated&direction=asc", function(data){repositories=data;});
 
 //-> General Functions
-function portfolioLoad(count = portfolio.length){
+function portfolioRender(count = portfolio.length){
     $('.portfoliosBox').hide().html('');
     let lp = portfolio.length - count;
     for (let i = portfolio.length - 1; i >= lp; i--) {
@@ -22,7 +22,7 @@ function portfolioLoad(count = portfolio.length){
     }
 }
 
-function repositoriesLoad(count = repositories.length){
+function repositoriesRender(count = repositories.length){
     $('.githubsBox').hide().html('');
     let lr = repositories.length - count;
     for (i = repositories.length - 1; i >= lr; i--) {
@@ -58,8 +58,8 @@ function emptyForm(){
 $(document).ajaxComplete(function(){
     $('.preloader').hide();
     $('.moreBtn').show();
-    portfolioLoad(4);
-    repositoriesLoad(3);
+    portfolioRender(4);
+    repositoriesRender(3);
 });
 
 
@@ -105,11 +105,11 @@ $(document).ready(function(){
     });
 
     $('.portfolioMore').click(function(){
-        portfolioLoad();
+        portfolioRender();
         $(this).hide();
     });
     $('.githubMore').click(function(){
-        repositoriesLoad();
+        repositoriesRender();
         $(this).hide();
     });
 
