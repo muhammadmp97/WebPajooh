@@ -119,7 +119,7 @@ $(document).ready(function(){
             if($(window).scrollTop() > pbElement) {
                 $('.skillProgress').each(function(){
                     const pbPercent = $(this).attr('percent');
-                    $(this).animate({width: pbPercent}, 2400);
+                    $(this).animate({width: pbPercent}, 2700);
                 });
                 pbVisited = true;
             };
