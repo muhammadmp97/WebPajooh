@@ -128,6 +128,9 @@ body{
     text-align: justify;
     margin-bottom: 25px;
 }
+.ctText p{
+    text-indent: 30px;
+}
 .cTextList li{
     list-style-image: url('../image/li.png');
 }
