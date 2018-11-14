@@ -1,8 +1,8 @@
 const appURL = location.href.replace(location.hash,"");
 let pbVisited = false;
 let portfolio = {}, repositories = {};
-//$.getJSON(appURL+"assets/portfolio.json", function(data){portfolio=data;});
-//$.getJSON("https://api.github.com/users/webpajooh/repos?sort=updated&direction=asc", function(data){repositories=data;});
+$.getJSON(appURL+"assets/portfolio.json", function(data){portfolio=data;});
+$.getJSON("https://api.github.com/users/webpajooh/repos?sort=updated&direction=asc", function(data){repositories=data;});
 
 //-> General Functions
 function portfolioRender(count = portfolio.length){
