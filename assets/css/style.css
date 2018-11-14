@@ -133,6 +133,7 @@ body{
 }
 .cTextList li{
     list-style-image: url('../image/li.png');
+    margin-bottom: 6px;
 }
 .cTextList li:last-child{
     font-family: 'FShabnamB';
