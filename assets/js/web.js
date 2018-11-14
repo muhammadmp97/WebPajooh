@@ -32,7 +32,7 @@ function repositoriesRender(count = repositories.length){
         let rLang = repositories[i].language;
         if (!rLang){rLang='Unknown';}
         let rURL = repositories[i].url;
-        let newRepositorie = '<div class="col-lg-4 col-sm-12 col-md-6"><a href="' + rURL + '"><div class="githubBox"><div class="gb_inner"><div class="githubTop"><h3 class="githubTitle"><i class="material-icons">archive</i> <span>' + rName + '</span></h3><span class="githubCat">' + rLang + '</span></div><div class="githubDesc">' + rDesc + '</div></div></div></a></div>';
+        let newRepositorie = '<div class="col-lg-4 col-sm-12 col-md-6"><a href="' + rURL + '" rel="nofollow" target="_blank"><div class="githubBox"><div class="gb_inner"><div class="githubTop"><h3 class="githubTitle"><i class="material-icons">archive</i> <span>' + rName + '</span></h3><span class="githubCat">' + rLang + '</span></div><div class="githubDesc">' + rDesc + '</div></div></div></a></div>';
         $('.githubsBox').append(newRepositorie).fadeIn(300);
     }
 }
