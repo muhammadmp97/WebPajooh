@@ -419,7 +419,10 @@ body{
 /*
     Contact Wrapper
  */
-.contactPaper{
+#contact{
+    padding-bottom: 8px;
+}
+    .contactPaper{
     padding: 23px 27px;
 }
 .wpInput{
@@ -579,14 +582,14 @@ body{
         font-size: 17px;
     }
 }
+.footerLeft{
+    margin-top: -5px;
+}
 #footerSocial{
     float: left;
 }
 .footerSocial a{
     text-decoration: none;
-}
-#footerSocial{
-    margin-top: -28px;
 }
 .fsIcon{
     width: 32px;
@@ -660,6 +663,14 @@ body{
     }
     #cnSend{width: 100%;}
     .contactFormMessage{margin-top: -5px; margin-bottom: 7px;}
+    .footerLeft{
+        width: auto;
+        margin-right: auto !important;
+        margin-left: auto !important;
+        float: none !important;
+        margin-top: 20px;
+        padding-left: 60px;
+    }
 }
 
 @media only screen and (min-width: 600px) and (max-width: 767px){
