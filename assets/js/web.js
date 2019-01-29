@@ -157,16 +157,20 @@ $(document).ready(function(){
     });
     $('#cnSend').click(function(){
         if (validateForm()){
-            let name = $('#cnName').val();
-            let family = $('#cnFamily').val();
+            let fullName = $('#cnName').val() + " " + $('#cnFamily').val();
             let email = $('#cnMail').val();
             let cat = $('.wpSelectTitle').text();
             let text = $('#cnMessage').val();
             $('#cnSend').html('<span>در حال ارتباط...</span>');
-            $.ajax({method: 'POST', data: {name: name, family: family, email: email, cat: cat, text: text}, url: '#', success: function(result){
+            $.ajax({method: 'POST', data: {fullname: fullName, email: email, cat: cat, text: text}, url: 'http://mewan.ir/api/reportbug', success: function(result){
+                if (result == 'true'){
                     $('#cnSend').html('<span>ارسال پیام</span>');
                     emptyForm();
                     $('#cnToast').fadeIn().delay(3500).fadeOut();
+                }else{
+                    $('#cnSend').html('<span>ارسال پیام</span>');
+                    $('.contactFormMessage').html('<i class="material-icons">error_outline</i> ارسال پیام با خطا مواجه شد!').fadeIn();
+                }
                 }, error: function(result){
                     $('#cnSend').html('<span>ارسال پیام</span>');
                     $('.contactFormMessage').html('<i class="material-icons">error_outline</i> ارسال پیام با خطا مواجه شد!').fadeIn();
