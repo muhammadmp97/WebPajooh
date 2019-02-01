@@ -162,7 +162,7 @@ $(document).ready(function(){
             let cat = $('.wpSelectTitle').text();
             let text = $('#cnMessage').val();
             $('#cnSend').html('<span>در حال ارتباط...</span>');
-            $.ajax({method: 'POST', data: {fullname: fullName, email: email, cat: cat, text: text}, url: 'http://mewan.ir/api/reportbug', success: function(result){
+            $.ajax({method: 'POST', data: {fullname: fullName, email: email, cat: cat, text: text}, url: '//mewan.ir/api/reportbug', success: function(result){
                 if (result == 'true'){
                     $('#cnSend').html('<span>ارسال پیام</span>');
                     emptyForm();
