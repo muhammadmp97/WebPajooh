@@ -58,8 +58,8 @@ function emptyForm(){
 $(document).ajaxComplete(function(){
     $('.preloader').hide();
     $('.moreBtn').show();
-    portfolioRender(4);
     repositoriesRender(3);
+    portfolioRender(4);
 });
 
 $(document).ready(function(){
