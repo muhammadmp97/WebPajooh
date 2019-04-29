@@ -397,6 +397,7 @@ body{
     padding: 18px 18px;
 }
 .aboutText{
+    color: #333;
     font: 19px 'FShabnam';
     text-align: justify;
     text-indent: 24px;
