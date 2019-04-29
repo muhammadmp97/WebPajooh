@@ -328,7 +328,17 @@ body{
  */
 #github{
     direction: ltr !important;
+    position: relative;
     text-align: left;
+}
+#githubBGIcon{
+    position: absolute;
+    z-index: 0;
+    background: url("../image/github.png") no-repeat;
+    width: 196px;
+    height: 182px;
+    bottom: 0;
+    right: 0;
 }
 .githubBox{
     position: relative;
