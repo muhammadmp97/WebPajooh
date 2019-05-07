@@ -8,7 +8,8 @@ $.getJSON("https://api.github.com/users/webpajooh/repos?sort=updated&direction=a
 function portfolioRender(count = portfolio.length){
     $('.portfoliosBox').hide().html('');
     let lp = portfolio.length - count;
-    for (let i = portfolio.length - 1; i >= lp; i--) {
+    for (let i = portfolio.length - 1; i > lp; i--) {
+    	console.log(i);
         let pTitle = portfolio[i].title;
         let pThumb = portfolio[i].thumb;
         let pLink = portfolio[i].url;
