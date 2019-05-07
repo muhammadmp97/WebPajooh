@@ -27,13 +27,14 @@ function repositoriesRender(count = repositories.length){
     let lr = repositories.length - count;
     for (i = repositories.length - 1; i >= lr; i--) {
         let rName = repositories[i].name;
+        if (rName == 'WebPajooh') {continue;}
         let rDesc = repositories[i].description;
         if (!rDesc){rDesc='No description';}
         let rLang = repositories[i].language;
         if (!rLang){rLang='Unknown';}
         let rURL = repositories[i].url;
         let newRepositorie = '<div class="col-lg-4 col-sm-12 col-md-6"><a href="' + rURL + '" rel="nofollow" target="_blank"><div class="githubBox"><div class="gb_inner"><div class="githubTop"><h3 class="githubTitle"><i class="material-icons">archive</i> <span>' + rName + '</span></h3><span class="githubCat">' + rLang + '</span></div><div class="githubDesc">' + rDesc + '</div></div></div></a></div>';
-        $('.githubsBox').append(newRepositorie).fadeIn(300);
+	    $('.githubsBox').append(newRepositorie).fadeIn(300);
     }
 }
 
@@ -58,7 +59,7 @@ function emptyForm(){
 $(document).ajaxComplete(function(){
     $('.preloader').hide();
     $('.moreBtn').show();
-    repositoriesRender(3);
+    repositoriesRender(4);
     portfolioRender(4);
 });
 
