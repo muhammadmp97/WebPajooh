@@ -7,7 +7,7 @@ $.getJSON("https://api.github.com/users/webpajooh/repos?sort=updated&direction=a
 //-> General Functions
 function portfolioRender(count = portfolio.length){
     $('.portfoliosBox').hide().html('');
-    let lp = portfolio.length - count;
+    let lp = portfolio.length - count - 1;
     for (let i = portfolio.length - 1; i > lp; i--) {
         let pTitle = portfolio[i].title;
         let pThumb = portfolio[i].thumb;
