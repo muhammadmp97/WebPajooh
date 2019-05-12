@@ -17,7 +17,7 @@ function portfolioRender(count = portfolio.length){
         for (j = 0; j < pTags.length; j++) {
             pTagsList = pTagsList + '<li>' + pTags[j] + '</li>';
         }
-        let newPortfolio = '<div class="col-lg-3"><a href="' + pLink + '" rel="nofollow" target="_blank"><div class="portfolioBox"><img class="portfolioThumb" src="./assets/image/data/' + pThumb + '" alt="' + pTitle + '"><ul class="portfolioTags">' + pTagsList + '</ul><h3 class="portfolioTitle"><i class="material-icons">done_all</i> <span>' + pTitle + '</span></h3></div></a></div>';
+        let newPortfolio = '<div class="col-lg-3"><a href="' + pLink + '" rel="nofollow" target="_blank"><div class="portfolioBox"><img class="portfolioThumb" src="./assets/image/data/' + pThumb + '" alt="' + pTitle + '"><ul class="portfolioTags">' + pTagsList + '</ul><h3 class="portfolioTitle"><i class="material-icons"></i> <span>' + pTitle + '</span></h3></div></a></div>';
         $('.portfoliosBox').append(newPortfolio).fadeIn(500);
     }
 }
