@@ -626,8 +626,11 @@ body{
 .fsCodepen{
     background-position: -72px;
 }
-.fsDonate{
+.fsEmail{
     background-position: -145px;
+}
+.fsDonate{
+    background-position: -181px;
 }
 
 /*
