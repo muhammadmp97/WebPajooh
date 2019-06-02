@@ -4,6 +4,7 @@
 ::selection{background:#B46969; color:#fff;}
 ::-moz-selection{background:#B46969; color:#fff;}
 a{text-decoration:none !important;} a:hover{text-decoration:none !important;} a:active{text-decoration:none !important;}
+input{outline: none !important;}
 .noselect{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
 .material-icons{font-family:'Material'; font-weight:normal; font-style:normal; font-size:24px; display:inline-block; line-height:1; text-transform:none; letter-spacing:normal; word-wrap:normal; white-space:nowrap; direction:ltr; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; -moz-osx-font-smoothing:grayscale; font-feature-settings:'liga';}
 body{
