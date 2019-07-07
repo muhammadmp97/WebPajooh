@@ -22,5 +22,11 @@
     "url": "https://webpajooh.github.io/PishvazeNoor/",
     "thumb": "4.jpg",
     "tags": "jQuery"
+  },
+  {
+    "title": "ربات انوار القرآن",
+    "url": "#",
+    "thumb": "5.jpg",
+    "tags": "PHP;Telegram API"
   }
 ]
